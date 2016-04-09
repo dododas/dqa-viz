@@ -46,6 +46,9 @@ sim.data = cbind(1:60, sim.data) # add observation period
 sim.data %<>% as.data.frame() # convert to data frame
 names(sim.data) = c("obs.period", paste0("site-", 1:n.sites)) # rename columns
 
+# save simulated data
+write.csv(sim.data, file="../data/anomaly-by-site.csv", row.names=F)
+
 #2. Plot data
 
 # Convert to long form for plotting
