@@ -65,8 +65,20 @@ ggplot(data.summary, aes(x=site, y=mean.fp.rate, colour=mean.fp.rate)) +
     theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12))
 dev.off()
 
-# Boxplot summaries
+# Variation: bar chart
 png("../plots/anomaly-by-site-2.png", width=720, height=480)
+ggplot(data.summary, aes(x=site, y=mean.fp.rate,
+                         colour=mean.fp.rate, fill=mean.fp.rate)) +
+    geom_bar(stat="identity", width=0.3, alpha=0.7) +
+    scale_fill_gradient(guide=F, high="red") +
+    scale_color_gradient(guide=F, high="red") +
+    ylab("false positive diagnoses (%)") +
+    theme_bw() +
+    theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12))
+dev.off()
+
+# Boxplot summaries
+png("../plots/anomaly-by-site-3.png", width=720, height=480)
 ggplot(plot.data, aes(x=site, y=fp.rate)) +
     geom_boxplot() +
     ylab("false positive diagnoses (%)") +
@@ -75,7 +87,7 @@ ggplot(plot.data, aes(x=site, y=fp.rate)) +
 dev.off()
 
 # All data jittered
-png("../plots/anomaly-by-site-3.png", width=720, height=480)
+png("../plots/anomaly-by-site-4.png", width=720, height=480)
 ggplot(plot.data, aes(x=site, y=fp.rate, colour=fp.rate)) +
     geom_jitter(width=0.2, aes(alpha=0.5)) +
     scale_color_gradient(guide=F, high="red") + scale_alpha(guide=F) +

@@ -20,12 +20,16 @@ For this week, I generated some preliminary sketches for assessing data quality 
 
 ![](plots/anomaly-by-site-1.png)
 
-#### Visualization-2: Summary for technical audience
+Variation: bar chart
 
 ![](plots/anomaly-by-site-2.png)
 
-#### Visualization-3: All data
+#### Visualization-2: Summary for technical audience
 
 ![](plots/anomaly-by-site-3.png)
+
+#### Visualization-3: All data
+
+![](plots/anomaly-by-site-4.png)
 
 
