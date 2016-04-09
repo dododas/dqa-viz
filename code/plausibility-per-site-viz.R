@@ -10,7 +10,7 @@ library(reshape2)
 library(magrittr)
 library(dplyr)
 library(ggplot2)
-setwd("~/consulting/active-projects/dqa-visualization/dqa-viz/code/")
+#setwd("~/consulting/active-projects/dqa-visualization/dqa-viz/code/")
 
 ## 1. Simulate data
 
@@ -46,6 +46,8 @@ sim.data = cbind(1:60, sim.data) # add observation period
 sim.data %<>% as.data.frame() # convert to data frame
 names(sim.data) = c("obs.period", paste0("site-", 1:n.sites)) # rename columns
 
+#2. Plot data
+
 # Convert to long form for plotting
 plot.data = melt(sim.data, id.vars="obs.period",
                  variable.name="site", value.name="fp.rate")
@@ -62,10 +64,11 @@ ggplot(data.summary, aes(x=site, y=mean.fp.rate, colour=mean.fp.rate)) +
     scale_color_gradient(guide=F, high="red") +
     ylab("false positive diagnoses (%)") +
     theme_bw() +
-    theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12))
+    theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12)) +
+    ggtitle("Data from 2010-2015")
 dev.off()
 
-# Variation: bar chart
+# Variation: mean error rates as bar chart
 png("../plots/anomaly-by-site-2.png", width=720, height=480)
 ggplot(data.summary, aes(x=site, y=mean.fp.rate,
                          colour=mean.fp.rate, fill=mean.fp.rate)) +
@@ -74,7 +77,8 @@ ggplot(data.summary, aes(x=site, y=mean.fp.rate,
     scale_color_gradient(guide=F, high="red") +
     ylab("false positive diagnoses (%)") +
     theme_bw() +
-    theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12))
+    theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12)) +
+    ggtitle("Data from 2010-2015")
 dev.off()
 
 # Boxplot summaries
@@ -83,7 +87,8 @@ ggplot(plot.data, aes(x=site, y=fp.rate)) +
     geom_boxplot() +
     ylab("false positive diagnoses (%)") +
     theme_bw() +
-    theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12))
+    theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12)) +
+    ggtitle("Data from 2010-2015")
 dev.off()
 
 # All data jittered
@@ -93,5 +98,6 @@ ggplot(plot.data, aes(x=site, y=fp.rate, colour=fp.rate)) +
     scale_color_gradient(guide=F, high="red") + scale_alpha(guide=F) +
     ylab("false positive diagnoses (%)") +
     theme_bw() +
-    theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12))
+    theme(axis.text.x = element_text(angle=45, vjust=0.5, size=12)) +
+    ggtitle("Data from 2010-2015")
 dev.off()
