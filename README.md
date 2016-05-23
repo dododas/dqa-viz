@@ -35,3 +35,19 @@ Variation: bar chart
 ![](plots/anomaly-by-site-4.png)
 
 
+### <a name="co-medicaid">CO medicaid beneficiary data</a>
+
+To create visualizations based on real data, I am exploring medicaid beneficiary data for Colorado. These data were downloaded from the [Medicaid Analytic eXtract MX Rx site](https://www.cms.gov/Research-Statistics-Data-and-Systems/Computer-Data-and-Systems/MedicaidDataSourcesGenInfo/Medicaid-Analytic-eXtract-MAX-Rx.html). The original excel files containing medicaid prescription data from 2001 through 2009 can be found [here](data/co-medicaid-data).
+
+#### Extract data
+
+This [R script](code/extract-co-medicaid-data.R) extracts the patient demographic characteristics from the excel files into a [single csv file](data/co-medicaid-demographics.csv).
+
+#### Visualization: Patient categories by year
+
+![](plots/category-by-year-1.png)
+
+#### Visualization: Patient age groups by year
+
+![](plots/age-by-year-1.png)
+

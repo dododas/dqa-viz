@@ -10,7 +10,6 @@ library(reshape2)
 library(magrittr)
 library(dplyr)
 library(ggplot2)
-#setwd("~/consulting/active-projects/dqa-visualization/dqa-viz/code/")
 
 ## 1. Simulate data
 
