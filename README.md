@@ -51,3 +51,6 @@ This [R script](code/extract-co-medicaid-data.R) extracts the patient demographi
 
 ![](plots/age-by-year-1.png)
 
+### Putting it all together
+
+I sketched out some rough ideas on how to put together different visualizations into a coherent presentation for the face-to-face meetings. [Click here to view](f2f-prep.md)
