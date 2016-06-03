@@ -44,3 +44,5 @@ Some more thoughts on how to utilize this website:
 - A short description "card" to go with each visualization.
 - Link to external interactive visualizations, eg: Sigfried's parallel coordinates.
 
+[Back to the front page](README.md)
+
