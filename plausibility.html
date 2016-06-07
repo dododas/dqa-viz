@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+DQA f2f meeting presentation demo
+Second level page demo
+
+Created by: Raibatak Das
+June 2016
+-->
+
+<head>
+  <title>Plausibility</title>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet", type="text/css", href="../css/960_12_col.css" />
+  <link rel="stylesheet", type="text/css", href="../css/dqa-presentation.css" />
+</head>
+
+<body>
+  <div class="container_12 clearfix">
+    <!-- start of header-->
+    <div id="header" class="plausibility grid_12">
+      <h2>DQA visualizations: Plausibility</h2>
+      <div id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="completeness.html">Completeness</a></li>
+          <li><a href="fidelity.html">Fidelity</a><li>
+          <li><a href="plausibility.html">Plausibility</a><li>
+          <li><a href="">Dashboard designs</a><li>
+        </ul>
+      </div>
+    </div> 
+    <!-- end of header -->
+
+    <!-- cover image and caption: card 0 -->
+    <div class="grid_4">
+      <p>Plausibility: Are the data believable?</p>
+      <hr>
+      <p>Example: Assessing plausiblity of false positive diagnoses for a set of sites. These visualizations demonstrate how anomalously high rates can be detected and flagged. Click here for details...
+      </p>
+    </div> <div class="slideshow grid_8">
+      <img class="slide fade" src="../plots/anomaly-by-site-2.png">
+      <img class="slide fade" src="../plots/anomaly-by-site-3.png">
+      <img class="slide fade" src="../plots/anomaly-by-site-4.png">
+      <a class="previous" onclick="shiftSlide(-1)">&#10094;</a> 
+      <a class="next" onclick="shiftSlide(1)">&#10095;</a>
+    </div>
+  </div>
+  <!-- end of top card -->
+  <hr>
+  <!-- next card -->
+  <div class="container_12 clearfix">
+    <div class="grid_4">
+      <p> Title for this card </p>
+      <hr>
+      <p> Example of a dashboard layout to visualize temporal implausibility in the number of patient visits.</p>
+      <p> Add more details about use case scenario here... </p>
+    </div> <div class="grid_8">
+      <img class="newslide" src="images/patient-visits-viz.png">
+    </div>
+  </div>
+  <hr>
+
+  <script>
+  var slideIndex = 1;
+  showSlide(slideIndex);
+
+  function shiftSlide(n) {
+    showSlide(slideIndex += n);
+  }
+
+  function showSlide(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length} ;
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[slideIndex-1].style.display = "block";  
+  }
+  </script>
+
+</body>
+</html>    
