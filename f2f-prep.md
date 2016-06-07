@@ -41,6 +41,7 @@ And finally, we can use a third level page to display all the visualizations
 ### More ideas
 
 Some more thoughts on how to utilize this website:
+
 - A short description "card" to go with each visualization.
 - Link to external interactive visualizations, eg: Sigfried's parallel coordinates.
 
