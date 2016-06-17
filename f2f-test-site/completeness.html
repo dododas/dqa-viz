@@ -14,6 +14,7 @@ June 2016
   <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet", type="text/css", href="css/960_12_col.css" />
+  <link rel="stylesheet", href="css/unslider.css">
   <link rel="stylesheet", type="text/css", href="css/dqa-presentation.css" />
 </head>
 
@@ -26,18 +27,81 @@ June 2016
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="completeness.html">Completeness</a></li>
-          <li><a href="fidelity.html">Fidelity</a><li>
-          <li><a href="plausibility.html">Plausibility</a><li>
-          <li><a href="">Dashboard designs</a><li>
+          <li><a href="fidelity.html">Fidelity</a></li>
+          <li><a href="plausibility.html">Plausibility</a></li>
+          <li><a href="">Dashboard designs</a></li>
         </ul>
       </div>
     </div> 
     <!-- end of header -->
 
-    <!-- cover image and caption: card 0 -->
-    <div class="grid_12">
+  <!-- cover image and caption: card 0 -->
+  <div class="grid_12">
       <img class="fullslide" src="images/parallel-coords.png">
-    </div>
+  </div>
   <hr>
+
+  <!-- Card #1 starts here -->
+    <div class="grid_4">
+      <p>Completeness: Are the data complete?</p>
+      <hr>
+      <p> What does completeness mean? How to visualize it? More description text goes here...
+      </p>
+    </div> <div class="grid_8">
+      <div class="slides">
+        <ul>
+          <li> <img class="slide" src="images/one.png"> </li>
+          <li> <img class="slide" src="images/two.png"> </li>
+          <li> <img class="slide" src="images/three.png"> </li>
+        </ul>
+      </div>
+    </div>
+  <!-- end of Card #1 -->
+  <hr>
+
+  <!-- Card #2 starts here -->
+  <div class="grid_4">
+    <p>Title goes here</p>
+    <hr>
+    <p> Description text goes here...
+    </p>
+    </div> <div class="grid_8">
+      <div class="slides">
+        <ul>
+          <li> <img class="slide" src="images/one.png"> </li>
+          <li> <img class="slide" src="images/two.png"> </li>
+          <li> <img class="slide" src="images/three.png"> </li>
+        </ul>
+      </div>
+  </div>
+  <!-- end of Card #2-->
+  <hr>
+
+  <!-- Card #3 -->
+  <div class="grid_4">
+    <p>Title goes here</p>
+    <hr>
+    <p> Description text goes here...
+    </p>
+    </div> <div class="grid_8">
+      <div class="slides">
+        <ul>
+          <li> <img class="slide" src="images/one.png"> </li>
+          <li> <img class="slide" src="images/two.png"> </li>
+          <li> <img class="slide" src="images/three.png"> </li>
+        </ul>
+      </div>
+    </div>
+  <!-- end of Card #3-->
+  <hr>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/unslider-min.js"></script>
+  <script>
+    jQuery(document).ready(function($) {
+      $('.slides').unslider();
+    });
+  </script>
+
 </body>
 </html>    
