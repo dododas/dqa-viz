@@ -3,6 +3,7 @@
 # Created by: Raibatak Das
 # Date: May 2016
 
+library(dplyr)
 library(ggplot2)
 #setwd("~/consulting/active-projects/dqa-visualization/dqa-viz/code/")
 
@@ -32,3 +33,4 @@ ggplot(data = medicaid.data,
     scale_x_continuous(breaks=c(2001:2009)) +
     theme_bw()
 dev.off()
+
