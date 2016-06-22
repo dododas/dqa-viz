@@ -20,14 +20,14 @@
   width: 6px;
   height: 6px;
   margin: 0 4px;
-  background: transparent;
+  background: #aaa;
   border-radius: 5px;
   overflow: hidden;
   text-indent: -999em;
-  border: 2px solid #fff;
+  border: 2px solid #aaa;
   cursor: pointer;
 }
 .unslider-nav ol li.unslider-active {
-  background: #fff;
+  background: #000;
   cursor: default;
 }

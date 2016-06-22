@@ -10,24 +10,23 @@ June 2016
 -->
 
 <head>
-  <title>DQA: Plausibility</title>
+  <title>DQA dashboards</title>
   <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet", type="text/css", href="css/960_12_col.css" />
+  <link rel="stylesheet", type="text/css", href="css/960_12_col.css"/>
   <link rel="stylesheet", type="text/css" href="css/unslider.css"/>
   <link rel="stylesheet", type="text/css" href="css/unslider-dots.css"/>
   <link rel="stylesheet", type="text/css", href="minimal-dqa-presentation.css"/>
-  <!--link rel="stylesheet", type="text/css", href="css/dqa-presentation.css" /-->
 </head>
 
 <body>
   <div class="container_12 clearfix">
     <!-- start of header-->
     <div id="header" class="grid_12">
-      <h2 class="plausibility">DQA visualizations: Plausibility</h2>
+      <h2 class="dashboard">DQA dashboard designs</h2>
       <div id="nav">
         <ul>
-          <li class="home"><a class="" href="index.html">Home</a></li>
+          <li class="home"><a href="index.html">Home</a></li>
           <li class="completeness"><a href="completeness.html">Completeness</a></li>
           <li class="fidelity"><a href="fidelity.html">Fidelity</a></li>
           <li class="plausibility"><a href="plausibility.html">Plausibility</a></li>
@@ -39,42 +38,47 @@ June 2016
     
     <!-- top level description -->
     <div class="grid_12">
-      <p><b>Plausibility: </b> Are data value believable? Do data values accurately reflect the concepts that they are supposed to represent? Do sequences of values make sense, such as no new encounters after date of death or no negative weight/height measurements.</p>
+      <p><b>Dashboard designs: </b> How do we examine the quality of one or more datasets withint a single unified dashboard?</p>
     </div>
     <hr>
     
     <!-- Card #1 starts here -->
     <div class="grid_4">
-      <p>Visualizing plausibility</p>
+      <p>Dashboard design: Travis</p>
       <hr>
-      <p> Example: Assessing the plausiblity of false positive diagnoses rates within a set of observation sites. These visualizations demonstrate how anomalously high rates can be detected and flagges. The data can be examined at increasing levels of detail depending on user needs.
-      </p> 
+      <p> Allows the user to load in a dataset and select specific categories within the data which need to be examined for data quality. The explorer provides a visual dashboard with overview gauging of the data quality specific to Completeness, Fidelity and Plausibility. The user can drill-down into areas by clicking on a sub-item such as Visits and gain more insight via visualizations designed to pinpoint areas of potential data quality within that category.
+      </p>
     </div> <div class="grid_8">
       <div class="slides">
         <ul>
-          <li> <img class="slide" src="images/anomaly-by-site-2.png"> </li>
-          <li> <img class="slide" src="images/anomaly-by-site-3.png"> </li>
-          <li> <img class="slide" src="images/anomaly-by-site-4.png"> </li>
+          <li> <img class="slide" src="images/travis-dqeval-1.png"> </li>
+          <li> <img class="slide" src="images/travis-dqeval-2.png"> </li>
+          <li> <img class="slide" src="images/travis-dqeval-3.png"> </li>
+          <li> <img class="slide" src="images/travis-dqeval-4.png"> </li>
         </ul>
       </div>
     </div>
   <!-- end of Card #1 -->
-  <hr />
+  <hr>
 
+  <!-- Card #2 starts here -->
   <div class="grid_4">
-      <p>Event Co-occurrence Explorer Mockup</p>
-      <hr>
-      <p>Idea for a complex, interactive visualization for exploring the frequency
-          of specific event types across patients and the proportion of patients
-          experiencing any given pair of events.</p>
-    </div> 
-    <div class="grid_8">
-      <img class="slide" src="images/co-occurrence-mockup.png" />
-    </div>
-    <hr />
-    
+    <p>Dashboard design: Carsten</p>
+    <hr>
+    <p> Description goes here...
+    </p>
+    </div> <div class="grid_8">
+      <div class="slides">
+        <ul>
+          <li> <img class="slide" src="images/one.png"> </li>
+          <li> <img class="slide" src="images/two.png"> </li>
+          <li> <img class="slide" src="images/three.png"> </li>
+        </ul>
+      </div>
   </div>
-  
+  <!-- end of Card #2-->
+  <hr>
+</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="js/unslider-min.js"></script>
@@ -83,6 +87,5 @@ June 2016
       $('.slides').unslider();
     });
   </script>
-
-  </body>
+</body>
 </html>    
