@@ -1,41 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DQA presentation demo</title>
+  <title>DQA visualizations</title>
   <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet", type="text/css", href="css/960_12_col.css" />
-  <link rel="stylesheet", type="text/css", href="css/dqa-presentation.css" />
+  <link rel="stylesheet", type="text/css", href="css/960_12_col.css" />
+  <!--link rel="stylesheet", type="text/css", href="css/dqa-presentation.css" /-->
+  <link rel="stylesheet", type="text/css", href="minimal-dqa-presentation.css"/>
 </head>
 
 <body>
   <div class="container_12 clearfix">
     <!-- start of header-->
     <div id="header" class="grid_12">
-      <h2>DQA presentation demo</h2>
-    </div> <!-- end of header -->
-
-    <!-- three cards on front page -->
-      <a href="completeness.html">
-        <div class="card_left grid_4">
-        <h3>Completeness</h3>
-        <img class="centered", src="images/completeness-front-page.png">
+      <h2 class="home">Data quality assessment visualizations</h2>
+      <div id="nav">
+        <ul>
+          <li class="home"><a class="" href="index.html">Home</a></li>
+          <li class="completeness"><a href="completeness.html">Completeness</a></li>
+          <li class="fidelity"><a href="fidelity.html">Fidelity</a></li>
+          <li class="plausibility"><a href="plausibility.html">Plausibility</a></li>
+          <li class="dashboard"><a href="dashboards.html">Dashboards</a></li>
+        </ul>
       </div>
-    </a>
-    <a href="fidelity.html">
-      <div class="card_middle grid_4">
-      <h3>Fidelity</h3>
-      <img class="centered", src="images/fidelity-front-page.png">
-    </div>
-  </a>
-    <a href="plausibility.html">
-    <div class="card_right grid_4">
-      <h3>Plausibility</h3>
-      <img class="centered", src="images/plausibility-front-page.png">
-    </div>
-    </a>
-    <!-- end of cards -->
-
+    </div> <!-- end of header -->
   </div>
 </body>
 </html>    
