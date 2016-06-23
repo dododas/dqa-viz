@@ -47,9 +47,15 @@ This [R script](code/extract-co-medicaid-data.R) extracts the patient demographi
 
 ![](plots/category-by-year-1.png)
 
+The next plot uses faceting to break down the time course for each category
+
+![](plots/category-by-year-2.png)
+
 #### Visualization: Patient age groups by year
 
 ![](plots/age-by-year-1.png)
+
+![](plots/age-by-year-2.png)
 
 ### Putting it all together
 
