@@ -55,12 +55,13 @@ dev.off()
 
 # Use faceting to show individual categories
 png("../plots/category-by-year-2.png", width=720, height=720)
-ggplot(category.counts, aes(x=year, y=n, color=category)) +
+category.counts %>%
+  mutate(category = factor(category, levels=rev(levels(category)))) %>%
+  ggplot(aes(x=year, y=n, color=category)) +
   geom_line() +
   geom_point(shape=1, size=3, stroke=1.5, colour="white") +
   geom_point() +
-  scale_color_brewer(type="div", palette="RdYlGn", direction=-1,
-                    guide = F) +
+  scale_color_brewer(type="div", palette="RdYlGn", guide = F) +
   facet_grid(category ~ ., scales="free_y") +
   scale_x_continuous(breaks=c(2001:2009)) +
   ylab("patient count") +
@@ -73,7 +74,7 @@ ggplot(age.counts, aes(x=year, y=n, fill=age)) +
   geom_bar(stat = "identity", width=0.5, alpha=0.8) +
   scale_fill_brewer(type = "seq", palette="YlOrRd", guide = guide_legend(reverse=T)) +
   scale_x_continuous(breaks=c(2001:2009)) +
-  ylab("Patient count") +
+  ylab("patient count") +
   scale_y_continuous(breaks=c(0, 2e5, 4e5, 6e5),
                      labels=c("0", "0.2 M", "0.4 M", "0.6 M")) +
   theme_bw()
@@ -81,11 +82,13 @@ dev.off()
 
 # Use faceting to show individual age groups
 png("../plots/age-by-year-2.png", width=720, height=720)
-ggplot(age.counts, aes(x=year, y=n, color=age)) +
+age.counts %>%
+  mutate(age = factor(age, levels=rev(levels(age)))) %>%
+  ggplot(aes(x=year, y=n, color=age)) +
   geom_line() +
   geom_point(shape=1, size=3, stroke=1.5, colour="white") +
   geom_point() +
-  scale_color_brewer(type = "seq", palette="YlOrRd", guide = F) +
+  scale_color_brewer(type = "seq", palette="YlOrRd", direction = -1, guide = F) +
   facet_grid(age ~ ., scales="free_y") +
   scale_x_continuous(breaks=c(2001:2009)) +
   ylab("patient count") +
